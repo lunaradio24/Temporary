@@ -1,0 +1,73 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOVk8H/RvT74CYRUG/89ccx",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/lunaradio24/Entanglement/blob/main/%08WordsCheck.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "y6GbWDRHE81e"
+      },
+      "outputs": [],
+      "source": [
+        "# 텍스트 입력 받기\n",
+        "user_text = input(\"글을 입력하세요: \")\n",
+        "\n",
+        "# 확인하고 싶은 단어들\n",
+        "words_to_check = [\"행복\", \"기쁨\", \"설렘\", \"두근\", \"사랑\", \"우정\", \"따듯함\", \"포근함\", \"눈물\",\n",
+        "                  \"미소\", \"웃음\", \"가족\", \"안락\", \"집\", \"침대\", \"휴식\", \"힐링\", \"바람\",\n",
+        "                  \"살랑\", \"바다\", \"휴가\", \"여행\", \"친구\", \"성취\", \"집중\", \"모임\", \"변화\",\n",
+        "                  \"일상\", \"안정\", \"햇살\", \"밤하늘\", \"여유\", \"구름\", \"하늘\", \"햇볕\", \"연인\",\n",
+        "                  \"아름다움\", \"예쁨\", \"귀여움\", \"기다림\", \"미소\", \"웃음\", \"즐거움\", \"농담\",\n",
+        "                  \"장난\", \"응원\", \"칭찬\", \"휴일\", \"휴가\", \"휴양\", \"휴식\", \"단잠\", \"이불\",\n",
+        "                  \"포근함\", \"배부름\", \"숲\", \"상쾌함\", \"편안함\", \"낮잠\", \"편한 의자\", \"소파\",\n",
+        "                  \"해먹\", \"커피\", \"맛있는 음식\", \"음악\", \"노래\", \"흥얼거림\", \"춤\", \"들썩들썩\",\n",
+        "                  \"두근두근\", \"로맨틱\", \"와인\", \"꽃\", \"향기\", \"별\", \"달\", \"저녁식사\", \"일상\",\n",
+        "                  \"당신\", \"선물\", \"감사\", \"가족\", \"믿음\", \"안락\", \"포옹\", \"흥미\", \"영화\",\n",
+        "                  \"여행\", \"강아지\", \"공연\", \"낮잠\", \"존경\", \"존중\", \"대화\", \"여유\", \"아름다움\",\n",
+        "                  \"상상력\", \"토론\", \"주말\", \"고요\", \"치킨\", \"맥주\", \"소맥\", \"저녁\", \"노을\",\n",
+        "                  \"금요일\", \"토요일\", \"간식\", \"케이크\", \"티타임\", \"홍차\", \"소풍\", \"캠핑\",\n",
+        "                  \"돗자리\", \"시\", \"낭독\", \"앞산\",\"산책\", \"정리\", \"청소\", \"웃음\", \"동행\",\n",
+        "                  \"만남\", \"밝음\", \"얼굴\", \"꼬리\"]\n",
+        "\n",
+        "def check_words_in_text(text, words_to_check):\n",
+        "    # 결과를 저장할 딕셔너리 초기화\n",
+        "    result = {word: word.lower() in text for word in words_to_check}\n",
+        "\n",
+        "    return result\n",
+        "\n",
+        "# 결과 확인\n",
+        "result = check_words_in_text(user_text, words_to_check)\n",
+        "\n",
+        "# 결과 출력\n",
+        "for word, is_present in result.items():\n",
+        "    if is_present:\n",
+        "      print(f\"단어 '{word}'는 텍스트에 포함되어 있습니다.\")\n"
+      ]
+    }
+  ]
+}
